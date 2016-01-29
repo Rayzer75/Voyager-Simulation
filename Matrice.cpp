@@ -50,5 +50,6 @@ Matrice operator*(Matrice A, Matrice B)
             }
         }
         result.Set(m);
+        return resultat;
     }
 }
