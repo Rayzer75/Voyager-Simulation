@@ -36,7 +36,7 @@ Matrice operator*(Matrice A, Matrice B)
     
     if(ncA!=nlB)
     {
-        cout << "lol les matrice ça ce multiplies pas comme ça fdp" << endl;
+        cout << "Honnêtement Gaëtan apprend a écrire" << endl;
         return result;
     }
     else
