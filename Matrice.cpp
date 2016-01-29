@@ -29,13 +29,15 @@ Matrice operator*(Matrice A, Matrice B)
     int nlA, ncA, nlB, ncB;
     A.GetSize(nlA, ncA);
     B.GetSize(nlB, ncB);
+    Matrice result(nlA, ncB);
+    
     if(ncA!=nlB)
     {
         cout << "lol les matrice ça ce multiplies pas comme ça fdp" << endl;
+        return result;
     }
     else
     {
-        Matrice result(nlA, ncB);
         double** m = new double*[nlA];
         for(int i=0; i<nlA ; i++)
         {
