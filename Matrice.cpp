@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Matrice.h"
 
 Matrice::Matrice(int a, int b)
