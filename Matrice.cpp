@@ -15,7 +15,7 @@ Matrice::Matrice(int a, int b)
         }
     }
     matrix = m;
-    nl = a:
+    nl = a;
     nc = b;
 }
 
