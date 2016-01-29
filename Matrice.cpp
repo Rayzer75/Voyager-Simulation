@@ -29,7 +29,7 @@ Matrice operator*(Matrice A, Matrice B)
     B.GetSize(nlB, ncB);
     if(ncA!=nlB)
     {
-        cout << "lol les matrice ça ce multiplies pas comme ça fdp" << endl;
+        cout << "lol les matrices ça se multiplient pas comme ça fdp" << endl;
     }
     else
     {
