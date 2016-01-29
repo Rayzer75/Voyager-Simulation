@@ -3,7 +3,7 @@
 Matrice::Matrice(int a, int b)
 {
     double** m = new double*[a];
-    for(int i=0; i<nl ; i++)
+    for(int i=0; i<a ; i++)
     {
         m[i] = new double[b];
     }
@@ -15,6 +15,8 @@ Matrice::Matrice(int a, int b)
         }
     }
     matrix = m;
+    nl = a:
+    nc = b;
 }
 
 Matrice::~Matrice()
