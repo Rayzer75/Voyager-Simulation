@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Matrice.h"
 
+using namespace std;
+
 Matrice::Matrice(int a, int b)
 {
     double** m = new double*[a];
