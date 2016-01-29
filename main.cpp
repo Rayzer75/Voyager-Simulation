@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     cout << "Hello world!" << endl;
-    Matrice A(2,2), B(3,3), C(2,2);
+    Matrice A(2,2), B(2,2), C(2,2);
     A.SetValue(0,0,1);    A.SetValue(0,1,4);
 
     A.SetValue(1,0,1);    A.SetValue(1,1,1);
