@@ -36,7 +36,7 @@ Matrice operator*(Matrice A, Matrice B)
     
     if(ncA!=nlB)
     {
-        cout << "lol fdp" << endl;
+        cout << "lol fdp*" << endl;
         return result;
     }
     else
@@ -54,6 +54,73 @@ Matrice operator*(Matrice A, Matrice B)
                 {
                     m[i][j]+=(A.GetValue(i,k))*(B.GetValue(k,j));
                 }
+            }
+        }
+        result.Set(m);
+        return result;
+    }
+}
+
+
+Matrice operator+(Matrice A, Matrice B)
+{
+    int nlA, ncA, nlB, ncB;
+    A.GetSize(nlA, ncA);
+    B.GetSize(nlB, ncB);
+    Matrice result(nlA, ncB);
+    
+    if(ncA!=ncB || nlA!=nlB)
+    {
+        cout << "lol fdp+" << endl;
+        return result;
+    }
+    else
+    {
+        double** m = new double*[nlA];
+        for(int i=0; i<nlA ; i++)
+        {
+            m[i] = new double[ncB];
+        }
+        for(int i=0; i<nlA ; i++)
+        {
+            for(int j=0; j<ncB ; j++)
+            {
+            
+             m[i][j]=(A.GetValue(i,j))+(B.GetValue(i,j));
+            
+            }
+        }
+        result.Set(m);
+        return result;
+    }
+}
+
+Matrice operator-(Matrice A, Matrice B)
+{
+    int nlA, ncA, nlB, ncB;
+    A.GetSize(nlA, ncA);
+    B.GetSize(nlB, ncB);
+    Matrice result(nlA, ncB);
+    
+    if(ncA!=ncB || nlA!=nlB)
+    {
+        cout << "lol fdp-" << endl;
+        return result;
+    }
+    else
+    {
+        double** m = new double*[nlA];
+        for(int i=0; i<nlA ; i++)
+        {
+            m[i] = new double[ncB];
+        }
+        for(int i=0; i<nlA ; i++)
+        {
+            for(int j=0; j<ncB ; j++)
+            {
+            
+             m[i][j]=(A.GetValue(i,j))-(B.GetValue(i,j));
+            
             }
         }
         result.Set(m);
