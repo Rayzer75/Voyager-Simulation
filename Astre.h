@@ -1,6 +1,8 @@
 #ifndef ASTRE_H
 #define ASTRE_H
 
+#include <math.h>
+
 
 class Astre
 {
@@ -17,6 +19,7 @@ class Astre
         void Settheta0(double val) { theta0 = val; }
         double Getspeed() { return speed; }
         void Setspeed(double val) { speed = val; }
+        void Update(double t) { pos[0] = radius*cos(theta0 + t); pos[1] = radius*sin(theta0 + t); }
     protected:
     private:
         double mass;
