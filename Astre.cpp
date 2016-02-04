@@ -16,3 +16,13 @@ Astre::~Astre()
 {
     //dtor
 }
+
+void Astre::Update(double t)
+{
+    if (radius)
+    {
+        pos[0] = radius*cos(theta0 + t*speed/radius);
+        pos[1] = radius*sin(theta0 + t*speed/radius);
+    }
+}
+
