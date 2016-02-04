@@ -33,29 +33,28 @@ Matrice operator*(Matrice A, Matrice B)
     A.GetSize(nlA, ncA);
     B.GetSize(nlB, ncB);
     Matrice result(nlA, ncB);
-    
+
     if(ncA!=nlB)
     {
-        cout << "lol fdp*" << endl;
+        cout << "* Impossible" << endl;
         return result;
     }
     else
     {
         double** m = new double*[nlA];
+
         for(int i=0; i<nlA ; i++)
         {
             m[i] = new double[ncB];
+            for (int j=0; j<ncB; j++)
+                m[i][j] = 0;
         }
+
         for(int i=0; i<nlA ; i++)
-        {
             for(int j=0; j<ncB ; j++)
-            {
                 for(int k=0; k<ncA ; k++)
-                {
                     m[i][j]+=(A.GetValue(i,k))*(B.GetValue(k,j));
-                }
-            }
-        }
+
         result.Set(m);
         return result;
     }
@@ -68,28 +67,27 @@ Matrice operator+(Matrice A, Matrice B)
     A.GetSize(nlA, ncA);
     B.GetSize(nlB, ncB);
     Matrice result(nlA, ncB);
-    
+
     if(ncA!=ncB || nlA!=nlB)
     {
-        cout << "lol fdp+" << endl;
+        cout << "+ Impossible" << endl;
         return result;
     }
     else
     {
         double** m = new double*[nlA];
+
         for(int i=0; i<nlA ; i++)
         {
             m[i] = new double[ncB];
+            for (int j=0; j<ncB; j++)
+                m[i][j] = 0;
         }
+
         for(int i=0; i<nlA ; i++)
-        {
             for(int j=0; j<ncB ; j++)
-            {
-            
-             m[i][j]=(A.GetValue(i,j))+(B.GetValue(i,j));
-            
-            }
-        }
+                m[i][j]=(A.GetValue(i,j))+(B.GetValue(i,j));
+
         result.Set(m);
         return result;
     }
@@ -101,28 +99,27 @@ Matrice operator-(Matrice A, Matrice B)
     A.GetSize(nlA, ncA);
     B.GetSize(nlB, ncB);
     Matrice result(nlA, ncB);
-    
+
     if(ncA!=ncB || nlA!=nlB)
     {
-        cout << "lol fdp-" << endl;
+        cout << "- Impossible" << endl;
         return result;
     }
     else
     {
         double** m = new double*[nlA];
+
         for(int i=0; i<nlA ; i++)
         {
             m[i] = new double[ncB];
+            for (int j=0; j<ncB; j++)
+                m[i][j] = 0;
         }
+
         for(int i=0; i<nlA ; i++)
-        {
             for(int j=0; j<ncB ; j++)
-            {
-            
-             m[i][j]=(A.GetValue(i,j))-(B.GetValue(i,j));
-            
-            }
-        }
+                m[i][j]=(A.GetValue(i,j))-(B.GetValue(i,j));
+
         result.Set(m);
         return result;
     }
