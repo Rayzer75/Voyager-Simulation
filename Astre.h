@@ -19,7 +19,7 @@ class Astre
         void Settheta0(double val) { theta0 = val; }
         double Getspeed() { return speed; }
         void Setspeed(double val) { speed = val; }
-        void Update(double t) { pos[0] = radius*cos(theta0 + t); pos[1] = radius*sin(theta0 + t); }
+        void Update(double t) { pos[0] = radius*cos(theta0 + t*speed/radius); pos[1] = radius*sin(theta0 + t*speed/radius); }
     protected:
     private:
         double mass;
