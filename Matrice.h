@@ -21,5 +21,7 @@ class Matrice
 };
 
 Matrice operator*(Matrice A, Matrice B);
+Matrice operator+(Matrice A, Matrice B);
+Matrice operator-(Matrice A, Matrice B);
 
 #endif // MATRICE_H
